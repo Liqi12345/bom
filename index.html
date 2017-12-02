@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆页面</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+input{
+	outline: none;
+	display: block;
+}
+.con{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .6);
+	position: relative;
+}
+.min{
+	width: 350px;
+	height: 300px;
+	background: #fff;
+	border-radius: 20px;
+	position: absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 50px;
+	box-sizing: border-box;
+}
+section{
+	width: auto;
+	height: auto;
+
+
+}
+.username,.userpass{
+	width: 200px;
+	height: 25px;
+	margin: 10px 0;
+}
+label{
+	font-size: 16px;
+}
+.submit{
+	width: 90px;
+	height: 35px;
+	margin: 0 55px;
+	margin-top: 30px;
+	border-radius: 5px;
+	color: #fff;
+	background: -webkit-linear-gradient(left,#058BF7,#0078D7);
+	border: 0;
+	cursor: pointer;
+}
+
+
+</style>
+<body>
+	<div class="con">
+		<div class="min">
+			<section>
+				<label>用户名 : </label>
+				<input type="text" placeholder="请输入用户名" name="username" value=""class="username">
+			</section>
+			<section>
+				<label>密码 : </label>
+				<input type="password" placeholder="请输入密码" value=""name="userpass" class="userpass">
+			</section>
+			<input type="submit" name="submit" class="submit" value="登陆">
+		</div>
+	</div>
+
+
+
+	
+</body>
+</html>
+<script>
+	let username = document.querySelector('.username');
+	let userpass = document.querySelector('.userpass');
+	let submit = document.querySelector('.submit');
+
+	submit.onclick= function(){
+		if(username.value.trim()=='liqi' && userpass.value.trim() == '123456'){
+			alert('登陆成功');
+		}else{
+			location.replace('erro.html');
+		}
+	}
+</script>

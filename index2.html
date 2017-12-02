@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width: 500px;
+	height: 800px;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+.top{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	color: #ff6700;
+	font-size: 30px;
+	text-align: center;
+	line-height: 100px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+</style>
+<body>
+<div class="con">
+	<div class="box"></div>
+	<div class="top">Top</div>
+</div>	
+</body>
+</html>
+<script>
+let t = document.querySelector('.top');
+t.style.display = 'none'
+window.onscroll = function(){
+	if( document.documentElement.scrollTop > 50){
+	 t.style.display = 'block'
+	}else{
+		t.style.display = 'none'
+	}
+}
+t.onclick = function(){
+	document.document.Element.scrollTop = 0
+}
+</script>
