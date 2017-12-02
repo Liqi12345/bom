@@ -69,17 +69,17 @@ p span{
 </body>
 </html>
 <script>
-var span = document.querySelector('span');
-console.log(span.innerText)
- var t = setInterval(function(){
- 	span.innerText--
- 	if(span.innerText <= 0){
- 		clearInterval(t)
- 		location.replace('index.html')
- 	}
- },1000)
+let sp = document.querySelector('span')
+console.log(sp)
+var t = setInterval(function(){
+	sp.innerText--
+	if(sp.innerText == 0){
+		clearInterval(t)
+		location.assign('index.html')
+	}
+},1000)
+	function s(){
+		location.replace('index.html')
+	}
 
-function s(){
-	location.assign('index.html')
-}
 </script>

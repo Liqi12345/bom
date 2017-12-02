@@ -47,14 +47,24 @@ console.log(Tt)
 Tt.style ='display:none';
 // 定义点击事件,点击之后出现或者消失
 window.onscroll=function(){
-	if(window.pageYOffset > 50){
+	var lin =  window.pageYOffset || document.documentElement.scrollTop||document.body.scrollTop || window.scrollY
+	if(lin > 50){
 		Tt.style = 'display:block';
 	}else{
 		Tt.style = 'display:none';
 	}
 }
-function tt(){
-	window.scrollTo(0,0);
+
+
+function tt(){ 
+	var bbb =  window.pageYOffset || document.documentElement.scrollTop||document.body.scrollTop || window.scrollY
+		var t = setInterval(function(){
+		 bbb -= 10;
+		 window.scrollTo(0,bbb)
+		 if(  bbb <= 0){
+			clearInterval(t)
+		 }
+	},1000)
 }
 
 
