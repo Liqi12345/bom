@@ -35,21 +35,28 @@
 <body>
 <div class="con">
 	<div class="box"></div>
-	<div class="top">Top</div>
+	<div class="top "onclick="tt()">Top</div>
 </div>	
 </body>
 </html>
 <script>
-let t = document.querySelector('.top');
-t.style.display = 'none'
-window.onscroll = function(){
-	if( document.documentElement.scrollTop > 50){
-	 t.style.display = 'block'
+// 获取点击元素
+let Tt = document.querySelector('.top');
+console.log(Tt)
+// 设置元素行内样式none
+Tt.style ='display:none';
+// 定义点击事件,点击之后出现或者消失
+window.onscroll=function(){
+	if(window.pageYOffset > 50){
+		Tt.style = 'display:block';
 	}else{
-		t.style.display = 'none'
+		Tt.style = 'display:none';
 	}
 }
-t.onclick = function(){
-	document.document.Element.scrollTop = 0
+function tt(){
+	window.scrollTo(0,0);
 }
+
+
+
 </script>

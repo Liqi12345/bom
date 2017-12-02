@@ -63,7 +63,7 @@ p span{
 		<div class="min">
 			<h3>输入有误</h3>
 			<p><span>5</span>秒后返回登陆页面</p>
-			<input type="submit" name="sub" class="sub" value="登陆">
+			<input type="submit" name="sub" class="sub" value="登陆" onclick="s()">
 		</div>
 	</div>
 </body>
@@ -79,4 +79,7 @@ console.log(span.innerText)
  	}
  },1000)
 
+function s(){
+	location.assign('index.html')
+}
 </script>
