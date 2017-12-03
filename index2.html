@@ -11,7 +11,7 @@
 }
 .box{
 	width: 500px;
-	height: 800px;
+	height: 5000px;
 	border: 1px solid red;
 	margin: 0 auto;
 }
@@ -48,7 +48,7 @@ Tt.style ='display:none';
 // 定义点击事件,点击之后出现或者消失
 window.onscroll=function(){
 	var lin =  window.pageYOffset || document.documentElement.scrollTop||document.body.scrollTop || window.scrollY
-	if(lin > 50){
+	if(lin >4000){
 		Tt.style = 'display:block';
 	}else{
 		Tt.style = 'display:none';
@@ -64,7 +64,7 @@ function tt(){
 		 if(  bbb <= 0){
 			clearInterval(t)
 		 }
-	},1000)
+	},10)
 }
 
 
